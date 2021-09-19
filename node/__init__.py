@@ -26,9 +26,8 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    # a simple page that says hello
     @app.route('/')
-    def hello():
+    def index():
         return 'Node started'
 
     @app.route('/status')
