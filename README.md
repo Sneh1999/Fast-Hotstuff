@@ -10,3 +10,8 @@ This would be the prototype for Fast Hotstuff protocol
 ## To install the dependencies within venv
 
 `pip3 install -r requirements.txt`
+
+## Kill all running docker containers
+
+`docker stop $(docker ps -aq)`
+`docker rm $(docker ps -aq)`
