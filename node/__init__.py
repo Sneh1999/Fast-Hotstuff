@@ -11,6 +11,8 @@ from qc import QC
 from dataclasses import asdict
 load_dotenv()
 
+# TODO: Add a timeout
+
 
 def retry_blocktransfer(i, ports, block):
     while True:
@@ -40,6 +42,7 @@ def start_blockgenration():
         print("I started Block generation", flush=True)
         block = generate_block()
         ports = os.environ['PORTS'].split(',')
+        # if sequence is zero ignore the qc
         for i in range(0, len(ports)):
             if ports[i] != os.environ['FLASK_RUN_PORT']:
                 response = retry_blocktransfer(i, ports, block)
