@@ -10,6 +10,9 @@ class Block:
     agg_qc: AggQC
     qc: QC
     cmd: str
+    # TODO:
+    # Integer for block sequence - 64 int
+    # Integer for View number maps to Primary ID
 
     def as_dict(self):
         return {

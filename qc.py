@@ -16,3 +16,9 @@ class QC:
             "block_hash": self.block_hash,
             "sig": self.sig
         }
+
+
+# view number + index + block hash - byte array and then sign it - vote for a block
+# every node generates a vote - only difference is index
+# qc will contain array of indexes
+#
